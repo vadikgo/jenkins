@@ -1,9 +1,10 @@
 ---
 - hosts: all
-  tasks:
-        - include_vars: st-enc-vars.yml
-        - include_vars: st-variables.yml
-        - name: Copy get_app_urls script
-          shell: echo "/tmp/{{was_jtzu_name | splitext | first}}"
+  become: yes
+  roles:
+      - ansible-role-java
+      - ansible-role-jenkins
   vars:
-      was_jtzu_name: jtzu-1.7.16c.zip
+      jenkins_hostname: localhost
+      jenkins_port: 8080
+      jenkins_rpm_url: http://10.21.25.212:8000/jenkins/jenkins-2.0-1.1.noarch.rpm
