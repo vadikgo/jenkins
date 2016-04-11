@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+        - include_vars: st-enc-vars.yml
+        - include_vars: st-variables.yml
+        - name: Copy get_app_urls script
+          shell: echo "/tmp/{{was_jtzu_name | splitext | first}}"
+  vars:
+      was_jtzu_name: jtzu-1.7.16c.zip
