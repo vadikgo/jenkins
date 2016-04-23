@@ -5,6 +5,7 @@
       - ansible-role-java
       - ansible-role-jenkins
   vars:
-      jenkins_hostname: localhost
+      #jenkins_hostname: localhost
       jenkins_port: 8080
-      jenkins_rpm_url: http://10.21.25.212:8000/jenkins/jenkins-2.0-1.1.noarch.rpm
+      #jenkins_rpm_url: http://10.21.25.212:8000/jenkins/jenkins-2.0-1.1.noarch.rpm
+      #jenkins_plugins_pack: http://10.21.25.212:8000/jenkins/plugins.tar.gz
